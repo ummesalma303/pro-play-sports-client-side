@@ -1,10 +1,13 @@
-// import { useContext } from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-// import { AuthContext } from "../provider/AuthProvider";
+import { AuthContext } from "../provider/AuthProvider";
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip'
+
 
 const Navbar = () => {
-    // const data = useContext(AuthContext)
-    // console.log(data)
+    const {user,signOutUser} = useContext(AuthContext)
+    
     const link =<>
     <NavLink to='/'>Home</NavLink>
     <NavLink to='/addEquipment'>Add Equipment</NavLink>
@@ -44,10 +47,23 @@ const Navbar = () => {
             {link}
           </ul>
         </div>
-        <div className="navbar-end space-x-2">
-          <NavLink to='/register' className="btn">Register</NavLink>
-          <NavLink to='/login' className="btn">Login</NavLink>
+      
+
+
+       <div className="navbar-end">
+       {
+        user?<div className="flex space-x-2 ">
+        <img data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} className="w-14 h-14 rounded-full" src= {user?.photoURL} alt="" /><Tooltip id="my-tooltip" /> <button className="btn" onClick={signOutUser}>Log Out</button>
+        </div>: <div className=" space-x-2">
+        <NavLink to='/register' className="btn">Register</NavLink>
+        <NavLink to='/login' className="btn">Login</NavLink>
         </div>
+    
+       }
+
+      
+  </div>
+       
       </div>
     );
 };
