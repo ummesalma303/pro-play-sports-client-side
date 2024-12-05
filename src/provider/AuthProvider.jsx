@@ -10,6 +10,7 @@ const AuthProvider = ({children}) => {
     
     const [loader,setLoader]=useState(true)
     const [user,setUser]=useState(null)
+    const [logUser,setLogUser]=useState()
 
 /* ----------------------------- create new user ---------------------------- */
     const createNewUser=( email, password)=>{
@@ -56,6 +57,7 @@ const updateUser=(data)=>{
     useEffect(()=>{
         const subscribe = onAuthStateChanged(auth, (user) => {
             setUser(user)
+            setLogUser(user)
             setLoader(false)
         })
         return ()=>subscribe()
@@ -65,6 +67,8 @@ const updateUser=(data)=>{
     const info={
         setUser,
         user,
+        logUser,
+        setLogUser,
         loader,
         createNewUser,
         updateUser,

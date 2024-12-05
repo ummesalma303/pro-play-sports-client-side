@@ -27,7 +27,8 @@ import PrivateRoute from "../privateRoute/PrivateRoute";
         },
         {
             path:'/allEquipment',
-            element:<AllEquipment></AllEquipment>
+            element:<AllEquipment></AllEquipment>,
+            loader:()=>fetch('http://localhost:5000/equipment')
         },
         {
             path:'/myEquipment',
