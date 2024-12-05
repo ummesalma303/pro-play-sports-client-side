@@ -3,7 +3,7 @@ import { Slide } from "react-awesome-reveal";
 
 const Products = ({product}) => {
     const {name,image,description,price,category}=product
-    console.log(product)
+    
     return (
           <Slide cascade >
               <div>

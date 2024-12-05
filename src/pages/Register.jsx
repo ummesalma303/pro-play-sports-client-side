@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Register = () => {
-  const {createNewUser} =useContext(AuthContext)
+  const navigate = useNavigate()
+  const {createNewUser,setUser,updateUser,user} =useContext(AuthContext)
   const handleSignUp=e=>{
     e.preventDefault()
     const form = e.target
@@ -11,13 +12,13 @@ const Register = () => {
     const photo=form.photo.value
     const email=form.email.value
     const password=form.password.value
-    console.log(name,photo,email,password)
+   
     const upperCase = /^(?=.*[A-Z]).*$/;
     const lowerCase = /^(?=.*[a-z]).*$/;
 
 
-    if(password.length <5){
-      alert('password mast be six carrcters')
+    if(password.length <6){
+      alert('password mast be at least six carrcters')
       return
     }else if (!upperCase.test(password)) {
       alert('Must contain one uppercase')
@@ -27,17 +28,26 @@ const Register = () => {
       return
     }
 
+
+    const updateData={
+      displayName:name,
+      photoURL:photo}
+
     createNewUser(email,password)
     .then(res=>{
-      console.log(res)
+      
+      updateUser(updateData)
+      
+      setUser({...user,...updateData})
       alert('user successfully sign Up')
+      navigate('/')
     })
     .catch(err=>console.log(err.message))
 
   }
     return (
         <div className='flex justify-center items-center my-12'>
-             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+             <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-lg">
       <form onSubmit={handleSignUp} className="card-body">
         <div className="form-control">
           <label className="label">
