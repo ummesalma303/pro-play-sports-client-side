@@ -1,10 +1,12 @@
 import React from 'react';
+import { Slide } from "react-awesome-reveal"; 
 
 const Products = ({product}) => {
     const {name,image,description,price,category}=product
     console.log(product)
     return (
-        <div>
+          <Slide cascade >
+              <div>
             <div className="card bg-base-100 shadow-md">
   <figure className="px-10 pt-10">
     <img
@@ -23,6 +25,8 @@ const Products = ({product}) => {
   </div>
 </div>
         </div>
+          </Slide>
+    
     );
 };
 

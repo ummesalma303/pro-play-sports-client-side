@@ -7,6 +7,7 @@ import AddEquipment from "../pages/AddEquipment";
 import MyEquipment from "../pages/MyEquipment";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 
 
   const router = createBrowserRouter([
@@ -22,7 +23,7 @@ import Login from "../pages/Login";
         },
         {
             path:'/addEquipment',
-            element:<AddEquipment></AddEquipment>
+            element:<PrivateRoute><AddEquipment></AddEquipment></PrivateRoute>
         },
         {
             path:'/allEquipment',
@@ -30,7 +31,7 @@ import Login from "../pages/Login";
         },
         {
             path:'/myEquipment',
-            element:<MyEquipment></MyEquipment>
+            element:<PrivateRoute><MyEquipment></MyEquipment></PrivateRoute>
         },
         {
             path:'/register',
