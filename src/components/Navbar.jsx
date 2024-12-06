@@ -34,7 +34,7 @@ useEffect(()=>{
           <div className='navbar  '>
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -55,7 +55,7 @@ useEffect(()=>{
               {link}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl -ml-6 md:-ml-0 text-white">Pro Play Sports</a>
+          <a className="btn btn-ghost text-xl -ml-6 md:-ml-0 text-white hidden md:flex">Pro Play Sports</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-5 text-white">
@@ -67,7 +67,7 @@ useEffect(()=>{
 
 
        <div className="navbar-end ">
-      <div>
+      <div className="mr-20 md:mr-0">
       {
         user?<div className="flex space-x-2 ">
         <img data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} className="w-14 h-14 rounded-full" src= {user?.photoURL} alt="" /><Tooltip id="my-tooltip" /> <button className="btn" onClick={signOutUser}>Log Out</button>
@@ -114,7 +114,7 @@ useEffect(()=>{
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
   </svg>
 </label>
-{/* <input type="checkbox" value="synthwave" onClick={toggleTheme} className="toggle theme-controller " /> */}
+
 </div>
       
   </div>
