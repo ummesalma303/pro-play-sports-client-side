@@ -9,10 +9,10 @@ const AllEquipment = () => {
         <div>
 
 <div className="overflow-x-auto w-11/12 mx-auto my-20">
-  <table className="table">
+  <table className="table bg-slate-100">
     {/* head */}
     <thead>
-      <tr>
+      <tr className='text-xl'>
         <th></th>
         <th>Name</th>
         <th>Category</th>
