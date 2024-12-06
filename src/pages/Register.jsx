@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Register = () => {
   const navigate = useNavigate()
@@ -18,13 +19,28 @@ const Register = () => {
 
 
     if(password.length <6){
-      alert('password mast be at least six carrcters')
+      // alert('password mast be at least six carrcters')
+      Swal.fire({
+        title: "Error",
+        text: 'password mast be at least six carrcters',
+        icon: "error"
+      });
       return
     }else if (!upperCase.test(password)) {
-      alert('Must contain one uppercase')
+      // alert('Must contain one uppercase')
+      Swal.fire({
+        title: "Error",
+        text: 'Must contain one uppercase',
+        icon: "error"
+      });
       return
     }else if (!lowerCase.test(password)) {
-      alert('Must contain one lowercase')
+      // alert('Must contain one lowercase')
+      Swal.fire({
+        title: "Error",
+        text: "Must contain one lowercase",
+        icon: "error"
+      });
       return
     }
 
@@ -39,10 +55,21 @@ const Register = () => {
       updateUser(updateData)
       
       setUser({...user,...updateData})
-      alert('user successfully sign Up')
+      
+      Swal.fire({
+        title: "Sign Up",
+        text: "User successfully sign Up",
+        icon: "success"
+      });
       navigate('/')
     })
-    .catch(err=>console.log(err.message))
+    .catch(err=>{
+      Swal.fire({
+        title: "Error",
+        text: `${err.message}`,
+        icon: "error"
+      });
+      console.log(err.message)})
 
   }
     return (

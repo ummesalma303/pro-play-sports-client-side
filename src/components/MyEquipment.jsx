@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const MyEquipment = ({equipment,loadedEquipment,setLoadedEquipment}) => {
@@ -37,19 +38,6 @@ const MyEquipment = ({equipment,loadedEquipment,setLoadedEquipment}) => {
                 })
             }
           });
-
-
-
-
-
-
-
-
-
-
-
-
-
       
     }
     return (
@@ -78,7 +66,7 @@ const MyEquipment = ({equipment,loadedEquipment,setLoadedEquipment}) => {
     </div>
     <p>Description: {description}</p>
     <div className="card-actions mt-4">
-      <button className="btn bg-blue-400 text-white">Update</button>
+      <NavLink to={`/updateEquipment/${_id}`}><button className="btn bg-blue-400 text-white">Update</button></NavLink>
       <button className="btn bg-blue-400 text-white" onClick={()=>handleDelete(_id)}>Delete</button>
     </div>
   </div>

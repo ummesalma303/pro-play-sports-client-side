@@ -9,8 +9,8 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({children}) => {
     
     const [loader,setLoader]=useState(true)
-    const [user,setUser]=useState('')
-    const [logUser,setLogUser]=useState()
+    const [user,setUser]=useState(null)
+    const [logUser,setLogUser]=useState('')
 
 /* ----------------------------- create new user ---------------------------- */
     const createNewUser=( email, password)=>{

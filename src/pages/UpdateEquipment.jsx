@@ -1,12 +1,15 @@
 import React, { useContext } from "react";
 import Title from "../components/Title";
 import { AuthContext } from "../provider/AuthProvider";
+import { useLoaderData } from "react-router-dom";
 
-const AddEquipment = () => {
-  const { logUser} = useContext(AuthContext);
-  console.log(logUser?.displayName);
-  console.log(logUser?.email);
-  const handleAddEquipment = (e) => {
+const UpdateEquipment = () => {
+//   const { logUser } = useContext(AuthContext)
+  const {_id,item,email,image,category,description,price,rating,customization,processing,stock,name} =useLoaderData()
+// console.log(data)
+
+
+  const UpdateEquipment = (e) => {
     e.preventDefault();
     const form = e.target;
 
@@ -36,8 +39,8 @@ const AddEquipment = () => {
     };
     // console.log(data)
 
-    fetch("http://localhost:5000/equipment", {
-      method: "POST",
+    fetch(`http://localhost:5000/equipment/${_id}`, {
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
@@ -47,7 +50,7 @@ const AddEquipment = () => {
       .then((data) => {
         console.log(data);
         if (data.acknowledged) {
-          alert("added successfully");
+          alert("Update successfully");
         }
       });
   };
@@ -58,7 +61,7 @@ const AddEquipment = () => {
         <div className=" bg-blue-50 w-full max-w-5xl shrink-0 ">
           <div className="mt-4">
             <Title
-              title={"Add Equipment"}
+              title={"Update Equipment"}
               subTitle={
                 "Explore our selection of high-quality sports gear. From running shoes to tennis racquets, find everything you need to excel in your sport."
               }
@@ -66,37 +69,35 @@ const AddEquipment = () => {
           </div>
 
           <form
-            onSubmit={handleAddEquipment}
+            onSubmit={UpdateEquipment}
             className="card-body grid grid-cols-1 md:grid-cols-2  gap-6 max-w-5xl "
           >
-
-            {/* 10 */}
-            <div className="form-control">
+              {/* 10 */}
+              <div className="form-control">
               <label className="label">
                 <span className="label-text">User Name</span>
               </label>
               <input
                 type="text"
                 name="name"
-                value={logUser?.displayName}
-                className="input input-bordered"
+                value={name}
+                className="input input-bordered bg-white"
                 disabled
               />
             </div>
             {/* 11 */}
-            <div className="form-control">
+            <div className="form-control ">
               <label className="label">
                 <span className="label-text">User Email</span>
               </label>
               <input
                 type="text"
                 name="email"
-                value={logUser?.email}
-                className="input input-bordered cursor-not-allowed "
+                value={email}
+                className="input input-bordered cursor-not-allowed bg-white"
                 disabled
               />
             </div>
-            
             {/* 1 */}
             <div className="form-control">
               <label className="label">
@@ -105,9 +106,8 @@ const AddEquipment = () => {
               <input
                 type="text"
                 placeholder="Item Name"
-                name="item"
+                name="item" defaultValue={item}
                 className="input input-bordered"
-                required
               />
             </div>
             {/* 2 */}
@@ -119,8 +119,8 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Image"
                 name="image"
+                defaultValue={image}
                 className="input input-bordered"
-                required
               />
             </div>
             {/* 3 */}
@@ -130,13 +130,13 @@ const AddEquipment = () => {
               </label>
               <input
                 type="text"
+                defaultValue={category}
                 placeholder="Category Name"
                 name="category"
                 className="input input-bordered"
-                required
               />
             </div>
-           
+            
             {/* 5 */}
             <div className="form-control">
               <label className="label">
@@ -146,8 +146,8 @@ const AddEquipment = () => {
                 type="number"
                 placeholder="Price"
                 name="price"
+                defaultValue={price}
                 className="input input-bordered"
-                required
               />
             </div>
             {/* 6 */}
@@ -159,8 +159,8 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Rating"
                 name="rating"
+                defaultValue={rating}
                 className="input input-bordered"
-                required
               />
             </div>
             {/* 7 */}
@@ -171,9 +171,9 @@ const AddEquipment = () => {
               <input
                 type="text"
                 placeholder="Customization"
+                defaultValue={customization}
                 name="customization"
                 className="input input-bordered"
-                required
               />
             </div>
             {/* 8 */}
@@ -185,8 +185,8 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Processing Time"
                 name="processing"
+                defaultValue={processing}
                 className="input input-bordered"
-                required
               />
             </div>
             {/* 9 */}
@@ -198,13 +198,12 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Stock Status"
                 name="stock"
+                defaultValue={stock}
                 className="input input-bordered"
-                required
               />
             </div>
-            
-             {/* 4 */}
-             <div className="form-control col-span-1 md:col-span-2">
+          {/* 4 */}
+          <div className="form-control col-span-1 md:col-span-2">
               <label className="label">
                 <span className="label-text">Description</span>
               </label>
@@ -212,13 +211,11 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Description"
                 name="description"
+                defaultValue={description}
                 className="input input-bordered"
-                required
               ></textarea>
-              {/* <input  placeholder="Description" className="input input-bordered" required /> */}
+              {/* <input  placeholder="Description" className="input input-bordered"  /> */}
             </div>
-
-
 
             <div className="form-control mt-6 col-span-1 md:col-span-2">
               <button type="submit" className="btn bg-blue-500 text-white ">
@@ -232,4 +229,4 @@ const AddEquipment = () => {
   );
 };
 
-export default AddEquipment;
+export default UpdateEquipment;

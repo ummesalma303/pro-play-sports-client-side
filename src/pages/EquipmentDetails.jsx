@@ -18,6 +18,7 @@ const EquipmentDetails = () => {
     <h4>Category: {category}</h4>
     <h4>Price: ${price}</h4>
     <h4>Email: {email}</h4>
+    <h4>User Name: {name}</h4>
     <h4>Rating: {rating}</h4>
     <h4>Customization: {customization}</h4>
     <h4>Processing: {processing}</h4>

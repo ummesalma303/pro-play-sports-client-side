@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../provider/AuthProvider';
 import { NavLink, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const navigate = useNavigate()
-    const {googleLoginUser,signInUser} =useContext(AuthContext)
+    const {googleLoginUser,signInUser,setUser} =useContext(AuthContext)
     // console.log(googleLoginUser)
 
     const handleSignIn=e=>{
@@ -21,11 +22,22 @@ const Login = () => {
       signInUser(email,password)
       .then(res=>{
         console.log(res)
-        alert('user successfully sign In')
+        // alert('user successfully sign In')
+        Swal.fire({
+          title: "Success",
+          text: "user successfully sign In",
+          icon: "success"
+        });
         setUser(res?.user)
         navigate('/')
       })
-      .catch(err=>console.log(err.message))
+      .catch(err=>{
+        Swal.fire({
+          title: "Error",
+          text: `${err.message}`,
+          icon: "error"
+        });
+      })
   
     }
 
