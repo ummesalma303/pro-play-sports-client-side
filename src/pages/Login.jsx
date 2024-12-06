@@ -46,7 +46,7 @@ const Login = () => {
       .then((result) => {
         // setLoader( false)
         setUser(result.user)
-
+        console.log(result.user)
         Swal.fire({
             title: "Success",
             text: "user successfully sign In",
