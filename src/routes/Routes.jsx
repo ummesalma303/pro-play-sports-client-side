@@ -4,7 +4,7 @@ import Home from "../pages/Home";
 import AllEquipment from "../pages/allEquipment";
 import ErrorPage from "../pages/ErrorPage";
 import AddEquipment from "../pages/AddEquipment";
-import MyEquipment from "../pages/MyEquipment";
+import MyEquipment from "../pages/MyEquipments";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import PrivateRoute from "../privateRoute/PrivateRoute";
@@ -33,7 +33,8 @@ import EquipmentDetails from "../pages/EquipmentDetails";
         },
         {
             path:'/myEquipment',
-            element:<PrivateRoute><MyEquipment></MyEquipment></PrivateRoute>
+            element:<PrivateRoute><MyEquipment></MyEquipment></PrivateRoute>,
+            loader:()=>fetch('http://localhost:5000/equipment')
         },
         {
             path:'/register',
