@@ -41,7 +41,28 @@ const Login = () => {
   
     }
 
+    const handleGoogleLogin = ()=>{
+      googleLoginUser()
+      .then((result) => {
+        // setLoader( false)
+        setUser(result.user)
 
+        Swal.fire({
+            title: "Success",
+            text: "user successfully sign In",
+            icon: "success"
+          });
+        //   navigate('/')
+        // <Navigate to='/'></Navigate>
+        // console.log(result,'login successfully')
+      }).catch((error) => {
+        Swal.fire({
+            title: "Error",
+            text: `${error.message}`,
+            icon: "error"
+          });
+      });
+    }
 
 
 
@@ -77,7 +98,7 @@ const Login = () => {
  </div>
  {/* google */}
  <div className='text-center'>
-    <button type='button' onClick={googleLoginUser} className='btn w-full'><FcGoogle />Login With Google</button>
+    <button type='button' onClick={handleGoogleLogin} className='btn w-full'><FcGoogle />Login With Google</button>
  </div>
  
  

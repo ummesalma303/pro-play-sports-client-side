@@ -2,6 +2,7 @@ import React from 'react';
 import { Slide } from "react-awesome-reveal"; 
 
 const Products = ({product}) => {
+  
     const {name,image,description,price,category}=product
     
     return (

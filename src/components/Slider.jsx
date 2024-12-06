@@ -31,7 +31,7 @@ const Slider = () => {
         <div>
             <img className='h-[90vh] w-full relative' src={banner} alt="" />
            <div className="absolute inset-0  flex justify-center items-center h-screen bg-gradient-to-t from-[#0000001a] to-[#00000083]  ">
-           <div className=" text-white w-1/2 text-center space-y-6">
+           <div className=" text-white w-[80%] md:w-1/2 text-center space-y-6">
                 <h2 className='text-5xl font-bold'>Pro Play Sports</h2>
                 <p>At Pro Play Sports, we provide top-quality sports equipment for athletes of all levels. From beginners to pros, our gear ensures peak performance and durability. Shop with us and elevate your game with the best in the industry. Pro Play Sports—your ultimate destination for athletic excellence.</p>
             </div>
@@ -42,7 +42,7 @@ const Slider = () => {
       <div>
             <img className='h-[90vh] w-full relative' src={banner2} alt="" />
            <div className="absolute inset-0  flex justify-center items-center h-screen bg-gradient-to-t from-[#0000001a] to-[#00000083]  ">
-           <div className=" text-white w-1/2 text-center space-y-6">
+           <div className=" text-white w-[80%] md:w-1/2 text-center space-y-6">
                 <h2 className='text-5xl font-bold'>Pro Play Sports</h2>
                 <p>At Pro Play Sports, we provide top-quality sports equipment for athletes of all levels. From beginners to pros, our gear ensures peak performance and durability. Shop with us and elevate your game with the best in the industry. Pro Play Sports—your ultimate destination for athletic excellence.</p>
             </div>
@@ -53,7 +53,7 @@ const Slider = () => {
       <div>
             <img className='h-[90vh] w-full relative' src={banner3} alt="" />
            <div className="absolute inset-0  flex justify-center items-center h-screen bg-gradient-to-t from-[#0000001a] to-[#00000083]  ">
-           <div className=" text-white w-1/2 text-center space-y-6">
+           <div className=" text-white w-[80%] md:w-1/2 text-center space-y-6">
                 <h2 className='text-5xl font-bold'>Pro Play Sports</h2>
                 <p>At Pro Play Sports, we provide top-quality sports equipment for athletes of all levels. From beginners to pros, our gear ensures peak performance and durability. Shop with us and elevate your game with the best in the industry. Pro Play Sports—your ultimate destination for athletic excellence.</p>
             </div>
@@ -64,7 +64,7 @@ const Slider = () => {
       <div>
             <img className='h-[90vh] w-full relative' src={banner4} alt="" />
            <div className="absolute inset-0  flex justify-center items-center h-screen bg-gradient-to-t from-[#0000001a] to-[#00000083]  ">
-           <div className=" text-white w-1/2 text-center space-y-6">
+           <div className=" text-white w-[80%] md:w-1/2 text-center space-y-6">
                 <h2 className='text-5xl font-bold'>Pro Play Sports</h2>
                 <p>At Pro Play Sports, we provide top-quality sports equipment for athletes of all levels. From beginners to pros, our gear ensures peak performance and durability. Shop with us and elevate your game with the best in the industry. Pro Play Sports—your ultimate destination for athletic excellence.</p>
             </div>

@@ -2,12 +2,13 @@ import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged,
 import React, { useEffect, useState } from 'react';
 import { createContext } from 'react';
 import { auth } from '../firebase/Firebase.config';
+import Swal from 'sweetalert2';
 
 const provider = new GoogleAuthProvider();
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({children}) => {
-    
+    // const navigate = useNavigate()
     const [loader,setLoader]=useState(true)
     const [user,setUser]=useState(null)
     const [logUser,setLogUser]=useState('')
@@ -30,15 +31,8 @@ const updateUser=(data)=>{
 }
     /* ---------------------------- login with google --------------------------- */
     const googleLoginUser=()=>{
-        signInWithPopup(auth, provider)
-        .then((result) => {
-            setUser(result.user)
-
-            // setLoader( false)
-            console.log(result,'login successfully')
-          }).catch((error) => {
-            console.log(error.message)
-          });
+       return signInWithPopup(auth, provider)
+       
     }
 
     // console.log(user)
@@ -46,9 +40,18 @@ const updateUser=(data)=>{
 
     const signOutUser=()=>{
         signOut(auth).then(() => {
-            alert('successfully sign out')
+          
+            Swal.fire({
+                title: "Success",
+                text: "successfully sign out",
+                icon: "success"
+              });
           }).catch((error) => {
-            console.log(error)
+            Swal.fire({
+                title: "Error",
+                text: `${error.message}`,
+                icon: "error"
+              });
           });
     }
 

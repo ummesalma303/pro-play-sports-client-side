@@ -2,19 +2,13 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { Navigate } from 'react-router-dom';
 import { DNA } from 'react-loader-spinner';
+import Loader from '../components/Loader';
 
 const PrivateRoute = ({children}) => {
     const {user,loader}= useContext(AuthContext)
 
    if(loader){
-    return <div className='mx-auto flex justify-center'><DNA
-    visible={true}
-    height="80"
-    width="80"
-    ariaLabel="dna-loading"
-    wrapperStyle={{}}
-    wrapperClass="dna-wrapper"
-    /></div>
+    return <Loader></Loader>
    }
 
     if (user) {

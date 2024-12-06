@@ -5,10 +5,16 @@ import Title from "../components/Title";
 import About from "../components/About";
 import Category from "../components/Category";
 import Subscribe from "../components/Subscribe";
+import { useState } from "react";
+import Loader from "../components/Loader";
 
 const Home = () => {
     const products =useLoaderData()
     // console.log(data)
+    // const [loading,setLoading] = useState(true)
+    // if (loading) {
+    //     return <Loader></Loader>
+    // }
     return (
      <div>
         <Slider></Slider>

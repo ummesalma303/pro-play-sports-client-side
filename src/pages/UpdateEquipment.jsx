@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Title from "../components/Title";
 import { AuthContext } from "../provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateEquipment = () => {
 //   const { logUser } = useContext(AuthContext)
@@ -50,7 +51,12 @@ const UpdateEquipment = () => {
       .then((data) => {
         console.log(data);
         if (data.acknowledged) {
-          alert("Update successfully");
+        //   alert("Update successfully");
+          Swal.fire({
+            title: "Success",
+            text: "Update successfully",
+            icon: "success"
+          });
         }
       });
   };

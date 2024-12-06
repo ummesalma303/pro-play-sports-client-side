@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Title from "../components/Title";
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddEquipment = () => {
   const { logUser} = useContext(AuthContext);
@@ -45,9 +46,13 @@ const AddEquipment = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.acknowledged) {
-          alert("added successfully");
+          // alert("added successfully");
+          Swal.fire({
+            title: "Success",
+            text: "data added successfully",
+            icon: "success"
+          });
         }
       });
   };
@@ -96,7 +101,7 @@ const AddEquipment = () => {
                 disabled
               />
             </div>
-            
+
             {/* 1 */}
             <div className="form-control">
               <label className="label">
