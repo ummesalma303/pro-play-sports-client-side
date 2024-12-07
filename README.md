@@ -1,8 +1,16 @@
-# React + Vite
+# Pro Play Sports
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Preview: https://sportsequirement.web.app/
+## Feature: 
 
-Currently, two official plugins are available:
+- Tailwind CSS: The component leverages Tailwind CSS, enabling the creation of highly customizable and modern UI components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive Design: Fully responsive layout ensures seamless browsing across all devices, from desktops to smartphones.
+
+- SweetAlert: Displays delightful confirmation messages upon successful submissions, enhancing the user experience.
+
+- React Router DOM: Enables smooth navigation between pages without reloading, ensuring a fast and seamless user interface.
+
+- React Awesome Reveal: Adds elegant animations to your components with the help of this powerful NPM package.
+
+- React Tooltip: Provides informative tooltips, such as showing the user's name when hovering over their profile.
