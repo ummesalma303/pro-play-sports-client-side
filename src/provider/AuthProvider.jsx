@@ -73,6 +73,7 @@ const updateUser=(data)=>{
         logUser,
         setLogUser,
         loader,
+        setLoader,
         createNewUser,
         updateUser,
         signInUser,

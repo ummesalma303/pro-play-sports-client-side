@@ -87,7 +87,7 @@ const UpdateEquipment = () => {
                 type="text"
                 name="name"
                 value={name}
-                className="input input-bordered bg-white"
+                className="px-4 py-3 bg-white rounded-md text-green-500"
                 disabled
               />
             </div>
@@ -100,7 +100,7 @@ const UpdateEquipment = () => {
                 type="text"
                 name="email"
                 value={email}
-                className="input input-bordered cursor-not-allowed bg-white"
+                className="px-4 py-3 bg-white rounded-md cursor-not-allowed text-green-500"
                 disabled
               />
             </div>
@@ -113,7 +113,7 @@ const UpdateEquipment = () => {
                 type="text"
                 placeholder="Item Name"
                 name="item" defaultValue={item}
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
               />
             </div>
             {/* 2 */}
@@ -126,7 +126,7 @@ const UpdateEquipment = () => {
                 placeholder="Image"
                 name="image"
                 defaultValue={image}
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
               />
             </div>
             {/* 3 */}
@@ -139,7 +139,7 @@ const UpdateEquipment = () => {
                 defaultValue={category}
                 placeholder="Category Name"
                 name="category"
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
               />
             </div>
             
@@ -153,7 +153,7 @@ const UpdateEquipment = () => {
                 placeholder="Price"
                 name="price"
                 defaultValue={price}
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
               />
             </div>
             {/* 6 */}
@@ -166,7 +166,7 @@ const UpdateEquipment = () => {
                 placeholder="Rating"
                 name="rating"
                 defaultValue={rating}
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
               />
             </div>
             {/* 7 */}
@@ -179,7 +179,7 @@ const UpdateEquipment = () => {
                 placeholder="Customization"
                 defaultValue={customization}
                 name="customization"
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
               />
             </div>
             {/* 8 */}
@@ -192,7 +192,7 @@ const UpdateEquipment = () => {
                 placeholder="Processing Time"
                 name="processing"
                 defaultValue={processing}
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
               />
             </div>
             {/* 9 */}
@@ -205,7 +205,7 @@ const UpdateEquipment = () => {
                 placeholder="Stock Status"
                 name="stock"
                 defaultValue={stock}
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
               />
             </div>
           {/* 4 */}
@@ -218,9 +218,9 @@ const UpdateEquipment = () => {
                 placeholder="Description"
                 name="description"
                 defaultValue={description}
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
               ></textarea>
-              {/* <input  placeholder="Description" className="input input-bordered"  /> */}
+              {/* <input  placeholder="Description" className="px-4 py-3 bg-white rounded-md"  /> */}
             </div>
 
             <div className="form-control mt-6 col-span-1 md:col-span-2">

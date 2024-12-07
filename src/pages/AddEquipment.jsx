@@ -34,6 +34,7 @@ const AddEquipment = () => {
       processing,
       stock,
       name,
+      sort: false
     };
     // console.log(data)
 
@@ -84,7 +85,7 @@ const AddEquipment = () => {
                 type="text"
                 name="name"
                 value={logUser?.displayName}
-                className="input input-bordered"
+                className="px-4 py-3 bg-white text-green-500 rounded-md cursor-not-allowed"
                 disabled
               />
             </div>
@@ -97,7 +98,7 @@ const AddEquipment = () => {
                 type="text"
                 name="email"
                 value={logUser?.email}
-                className="input input-bordered cursor-not-allowed "
+                className="px-4 py-3 bg-white text-green-500 rounded-md cursor-not-allowed "
                 disabled
               />
             </div>
@@ -111,7 +112,7 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Item Name"
                 name="item"
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
                 required
               />
             </div>
@@ -124,7 +125,7 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Image"
                 name="image"
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
                 required
               />
             </div>
@@ -137,7 +138,7 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Category Name"
                 name="category"
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
                 required
               />
             </div>
@@ -151,7 +152,7 @@ const AddEquipment = () => {
                 type="number"
                 placeholder="Price"
                 name="price"
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
                 required
               />
             </div>
@@ -164,7 +165,7 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Rating"
                 name="rating"
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
                 required
               />
             </div>
@@ -177,7 +178,7 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Customization"
                 name="customization"
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
                 required
               />
             </div>
@@ -190,7 +191,7 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Processing Time"
                 name="processing"
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
                 required
               />
             </div>
@@ -203,7 +204,7 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Stock Status"
                 name="stock"
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
                 required
               />
             </div>
@@ -217,7 +218,7 @@ const AddEquipment = () => {
                 type="text"
                 placeholder="Description"
                 name="description"
-                className="input input-bordered"
+                className="px-4 py-3 bg-white rounded-md"
                 required
               ></textarea>
               {/* <input  placeholder="Description" className="input input-bordered" required /> */}

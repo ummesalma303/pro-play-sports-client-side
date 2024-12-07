@@ -5,25 +5,45 @@ import Title from "../components/Title";
 import About from "../components/About";
 import Category from "../components/Category";
 import Subscribe from "../components/Subscribe";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 import Loader from "../components/Loader";
 
 const Home = () => {
-    const products =useLoaderData()
-    // console.log(data)
-    // const [loading,setLoading] = useState(true)
-    // if (loading) {
-    //     return <Loader></Loader>
+    const [loader,setLoader]=useState(true)
+    const [products,setProducts] =useState([])
+    // setLoader(true)
+    // {
+    //     loader?<Loader></Loader>:''
     // }
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/products')
+        .then(res=>res.json())
+        .then(data=>{
+            setProducts(data)
+            setLoader(false)
+        })
+    },[])
+
+
+        // console.log(products)
+
+
+
     return (
      <div>
         <Slider></Slider>
 {/* product section */}
        <section>
         <Title title={'Products'} subTitle={"Explore our selection of high-quality sports gear. From running shoes to tennis racquets, find everything you need to excel in your sport."}></Title>
+
+        {
+            loader&&<Loader></Loader>
+        }
        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-16 my-12 w-11/12 mx-auto">
         {
-            products.map(product=><Products key={product._id} product={product}></Products>)
+           !loader&&( products.map(product=><Products key={product._id} product={product}></Products>))
         }
         </div>
        </section>

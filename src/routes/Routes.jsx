@@ -22,7 +22,7 @@ import MyEquipments from "../pages/MyEquipments";
         {
             path:'/',
             element:<Home></Home>,
-            loader:()=>fetch('http://localhost:5000/products')
+            // loader:()=>fetch('http://localhost:5000/products')
         },
         {
             path:'/addEquipment',
