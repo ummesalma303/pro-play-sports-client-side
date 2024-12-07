@@ -52,9 +52,7 @@ const Login = () => {
             text: "user successfully sign In",
             icon: "success"
           });
-        //   navigate('/')
-        // <Navigate to='/'></Navigate>
-        // console.log(result,'login successfully')
+       
       }).catch((error) => {
         Swal.fire({
             title: "Error",

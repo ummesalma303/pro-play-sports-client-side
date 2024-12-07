@@ -70,7 +70,7 @@ useEffect(()=>{
       <div className="">
       {
         user?<div className="flex space-x-2 ">
-        <img data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} className="w-10 h-10 md:w-14 md:h-14 rounded-full" src= {user?.photoURL} alt="" /><Tooltip id="my-tooltip" /> <button className="bg-white rounded-md px-2 md:px-auto md:btn" onClick={signOutUser}>Log Out</button>
+        <img referrerPolicy="no-referrer" data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} className="w-10 h-10 md:w-14 md:h-14 rounded-full" src= {user?.photoURL} alt="" /><Tooltip id="my-tooltip" /> <button className="bg-white rounded-md px-2 md:px-auto md:btn" onClick={signOutUser}>Log Out</button>
         </div>: <div className=" space-x-2 mr-5">
         <NavLink to='/register' className="btn">Register</NavLink>
         <NavLink to='/login' className="btn hidden md:inline-flex">Login</NavLink>

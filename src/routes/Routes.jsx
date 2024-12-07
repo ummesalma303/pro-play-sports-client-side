@@ -11,9 +11,11 @@ import PrivateRoute from "../privateRoute/PrivateRoute";
 import EquipmentDetails from "../pages/EquipmentDetails";
 import UpdateEquipment from "../pages/UpdateEquipment";
 import MyEquipments from "../pages/MyEquipments";
+// import { useContext } from "react";
 
 
   const router = createBrowserRouter([
+    // const data = useContext()
     {
       path: "/",
       element: <MainLayout></MainLayout>,
@@ -37,6 +39,7 @@ import MyEquipments from "../pages/MyEquipments";
             path:'/myEquipments',
             element:<PrivateRoute><MyEquipments></MyEquipments></PrivateRoute>,
             loader:()=>fetch('http://localhost:5000/equipment')
+            
         },
         {
             path:'/register',
