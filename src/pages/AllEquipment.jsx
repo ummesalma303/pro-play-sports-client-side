@@ -9,7 +9,7 @@ const AllEquipment = () => {
   const [sort,setSort]=useState(false)
   
   useEffect(()=>{
-    fetch(`http://localhost:5000/equipment?sort=${sort}`)
+    fetch(`https://sports-equipment-server.vercel.app/equipment?sort=${sort}`)
     .then(res=>res.json())
     .then(data=>{
       setEquipments(data)

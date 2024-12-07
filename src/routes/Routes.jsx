@@ -24,7 +24,7 @@ import MyEquipments from "../pages/MyEquipments";
         {
             path:'/',
             element:<Home></Home>,
-            // loader:()=>fetch('http://localhost:5000/products')
+            // loader:()=>fetch('https://sports-equipment-server.vercel.app/products')
         },
         {
             path:'/addEquipment',
@@ -33,12 +33,12 @@ import MyEquipments from "../pages/MyEquipments";
         {
             path:'/allEquipment',
             element:<AllEquipment></AllEquipment>,
-            loader:()=>fetch('http://localhost:5000/equipment')
+            loader:()=>fetch('https://sports-equipment-server.vercel.app/equipment')
         },
         {
             path:'/myEquipments',
             element:<PrivateRoute><MyEquipments></MyEquipments></PrivateRoute>,
-            loader:()=>fetch('http://localhost:5000/equipment')
+            loader:()=>fetch('https://sports-equipment-server.vercel.app/equipment')
             
         },
         {
@@ -52,12 +52,12 @@ import MyEquipments from "../pages/MyEquipments";
         {
             path:'/equipment/:_id',
             element:<PrivateRoute><EquipmentDetails></EquipmentDetails></PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5000/equipment/${params._id}`)
+            loader:({params})=>fetch(`https://sports-equipment-server.vercel.app/equipment/${params._id}`)
         },
         {
             path:'/updateEquipment/:_id',
             element:<PrivateRoute><UpdateEquipment></UpdateEquipment></PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5000/equipment/${params._id}`)
+            loader:({params})=>fetch(`https://sports-equipment-server.vercel.app/equipment/${params._id}`)
         },
       ]
     },
