@@ -1,9 +1,10 @@
 import React from 'react';
 import { Slide } from "react-awesome-reveal"; 
+import { NavLink } from 'react-router-dom';
 
 const Products = ({product}) => {
   
-    const {name,image,description,price,category}=product
+    const {_id,name,image,description,price,category}=product
     
     return (
           <Slide cascade >
@@ -21,7 +22,7 @@ const Products = ({product}) => {
     <p>Category: {category}</p>
     <p className='my-2'>Description: {description}</p>
     <div className="card-actions">
-      <button className="btn bg-blue-500 text-white">View Details</button>
+      <NavLink to={`/productDetails/${_id}`}><button className="btn bg-blue-500 text-white">View Details</button></NavLink>
     </div>
   </div>
 </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Equipment from '../components/Equipment';
 import { BiSortAlt2 } from 'react-icons/bi';
+import { Fade } from 'react-awesome-reveal';
 
 const AllEquipment = () => {
   const data =useLoaderData()
@@ -23,11 +24,13 @@ const AllEquipment = () => {
 
   
     return (
-        <div>
+       <div className="bg-banner bg-no-repeat bg-cover">
+        
 
-<div className="overflow-x-auto w-11/12 mx-auto my-20">
+<div className="overflow-x-auto w-11/12 mx-auto pt-16 pb-20">
 <button className='btn mb-5 bg-teal-400 text-white' onClick={()=>handleSort(true)}><BiSortAlt2 />Sort</button>
-  <table className="table bg-slate-100">
+<Fade cascade>
+<table className="table backdrop-blur-md bg-white/80 *:text-black ">
     {/* head */}
     <thead>
       <tr className='text-xl'>
@@ -45,10 +48,12 @@ const AllEquipment = () => {
      
     </tbody>
   </table>
+</Fade>
 </div>
 
 
-        </div>
+     
+       </div>
     );
 };
 

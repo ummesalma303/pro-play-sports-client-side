@@ -42,9 +42,9 @@ const updateUser=(data)=>{
         signOut(auth).then(() => {
           
             Swal.fire({
-                title: "Success",
+                title: "Warning",
                 text: "successfully sign out",
-                icon: "success"
+                icon: "warning"
               });
           }).catch((error) => {
             Swal.fire({

@@ -1,12 +1,16 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation, useNavigation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader";
 
 const MainLayout = () => {
+    const navigation=useNavigation()
+    
     return (
         <div>
             <Navbar></Navbar>
-            <Outlet></Outlet>
+           { navigation.state === 'loading'?<Loader></Loader>: <Outlet></Outlet>}
+          
             <Footer></Footer>
         </div>
     );

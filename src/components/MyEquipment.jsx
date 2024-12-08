@@ -1,4 +1,5 @@
 import React from 'react';
+import { Slide } from 'react-awesome-reveal';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -12,8 +13,8 @@ const MyEquipment = ({equipment,loadedEquipment,setLoadedEquipment}) => {
             text: "You won't be able to revert this!",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#55efc4",
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
@@ -23,7 +24,7 @@ const MyEquipment = ({equipment,loadedEquipment,setLoadedEquipment}) => {
                 })
                 .then(res=>res.json())
                 .then(data=>{
-                    console.log(data)
+                   
                     if(data.deletedCount>0){
                         Swal.fire({
                             title: "Deleted!",
@@ -43,7 +44,8 @@ const MyEquipment = ({equipment,loadedEquipment,setLoadedEquipment}) => {
     return (
         <div>
             
-            <div className="card bg-base-100  shadow-xl">
+           <Slide>
+           <div className="card bg-base-100  shadow-lg">
   <figure className="px-10 pt-10">
     <img
       src={image}
@@ -71,6 +73,7 @@ const MyEquipment = ({equipment,loadedEquipment,setLoadedEquipment}) => {
     </div>
   </div>
 </div>
+           </Slide>
 
         </div>
     );

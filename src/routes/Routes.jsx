@@ -11,6 +11,7 @@ import PrivateRoute from "../privateRoute/PrivateRoute";
 import EquipmentDetails from "../pages/EquipmentDetails";
 import UpdateEquipment from "../pages/UpdateEquipment";
 import MyEquipments from "../pages/MyEquipments";
+import ProductDetails from "../pages/ProductDetails";
 // import { useContext } from "react";
 
 
@@ -24,7 +25,12 @@ import MyEquipments from "../pages/MyEquipments";
         {
             path:'/',
             element:<Home></Home>,
-            // loader:()=>fetch('https://sports-equipment-server.vercel.app/products')
+            loader:()=>fetch('https://sports-equipment-server.vercel.app/products')
+        },
+        {
+            path:'/productDetails/:_id',
+            element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+            loader:({params})=>fetch(`https://sports-equipment-server.vercel.app/products/${params._id}`)
         },
         {
             path:'/addEquipment',

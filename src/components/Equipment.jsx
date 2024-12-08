@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Equipment = ({equipment,idx}) => {
     const {_id,name,category,price} = equipment
-    // console.log(equipment)
+    
     return (
        
           
@@ -13,7 +13,7 @@ const Equipment = ({equipment,idx}) => {
         <td>{name}</td>
         <td>{category}</td>
         <td>{price}</td>
-        <td><NavLink to={`/equipment/${_id}`}><button className='btn bg-white'>View Details</button></NavLink></td>
+        <td><NavLink to={`/equipment/${_id}`}><button className='btn bg-white text-black'>View Details</button></NavLink></td>
       </tr>
     
         

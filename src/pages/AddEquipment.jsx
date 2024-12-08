@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import Title from "../components/Title";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
+import { Fade } from "react-awesome-reveal";
 
 const AddEquipment = () => {
   const { logUser} = useContext(AuthContext);
-  console.log(logUser?.displayName);
-  console.log(logUser?.email);
+  
   const handleAddEquipment = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -50,7 +50,7 @@ const AddEquipment = () => {
           // alert("added successfully");
           Swal.fire({
             title: "Success",
-            text: "data added successfully",
+            text: "Submit Your Equipment Successfully",
             icon: "success"
           });
         }
@@ -60,8 +60,9 @@ const AddEquipment = () => {
   return (
     <div className="my-20 w-11/12 mx-auto">
       <div className="flex justify-center items-center">
-        <div className=" bg-blue-50 w-full max-w-5xl shrink-0 ">
-          <div className="mt-4">
+      <Fade cascade>
+      <div className=" bg-blue-50 w-full max-w-5xl shrink-0 ">
+          <div className="pt-8">
             <Title
               title={"Add Equipment"}
               subTitle={
@@ -232,6 +233,7 @@ const AddEquipment = () => {
             </div>
           </form>
         </div>
+      </Fade>
       </div>
     </div>
   );

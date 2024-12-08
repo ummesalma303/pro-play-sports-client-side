@@ -15,7 +15,7 @@ const Subscribe = () => {
                        <div>
                    
                    <label className="" >
-                    <input type="text" placeholder='Subscribe...' className=' bg-transparent border-b-2 text-white mb-6 md:w-full' /><br />
+                    <input type="text" placeholder='Subscribe...' className=' bg-transparent border-b-2 leading-10 text-white mb-6 md:w-full' /><br />
                      <span className=" btn bg-amber-500 text-white">Subscribe</span>
                    </label>
                                        </div>
