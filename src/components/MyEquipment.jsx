@@ -68,7 +68,7 @@ const MyEquipment = ({equipment,loadedEquipment,setLoadedEquipment}) => {
     </div>
     <p>Description: {description}</p>
     <div className="card-actions mt-4">
-      <NavLink to={`/updateEquipment/${_id}`}><button className="btn bg-blue-400 text-white">Update</button></NavLink>
+      <NavLink to={`/updateEquipment/${_id}`}><button className="btn bg-blue-500 text-white">Update</button></NavLink>
       <button className="btn bg-blue-500 text-white" onClick={()=>handleDelete(_id)}>Delete</button>
     </div>
   </div>

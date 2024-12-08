@@ -62,7 +62,7 @@ const AddEquipment = () => {
       <div className="flex justify-center items-center">
       <Fade cascade>
       <div className=" bg-blue-50 w-full max-w-5xl shrink-0 ">
-          <div className="pt-8">
+          <div className="pt-8 text-black">
             <Title
               title={"Add Equipment"}
               subTitle={

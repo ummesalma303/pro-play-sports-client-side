@@ -8,9 +8,10 @@ const About = () => {
        
                 <Fade cascade damping={0.1}>
         <div className='flex flex-wrap-reverse md:flex-nowrap md:justify-between items-center w-11/12 mx-auto'>
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 space-y-3">
                 <h2 className='text-5xl font-bold mb-5'>About Us</h2>
                 <p>At Pro Play Sports, we provide top-quality sports equipment for athletes of all levels. From beginners to pros, our gear ensures peak performance and durability. Shop with us and elevate your game with the best in the industry. Pro Play Sports—your ultimate destination for athletic excellence.</p>
+          <button className='btn bg-amber-50 border-2 rounded-lg bg-none border-blue-400 my'>Shop Now</button>
             </div>
           <div className="md:w-[66%]">
           <Lottie animationData={player} loop={true}></Lottie>
