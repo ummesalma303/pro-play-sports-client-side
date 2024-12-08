@@ -6,11 +6,12 @@ import Loader from "../components/Loader";
 const MainLayout = () => {
     const navigation=useNavigation()
     
+    console.log(navigation.state)
     return (
         <div>
             <Navbar></Navbar>
-           { navigation.state === 'loading'?<Loader></Loader>: <Outlet></Outlet>}
-          
+           {/* { navigation.state === 'loading'?<Loader></Loader>: <Outlet></Outlet>} */}
+           <Outlet></Outlet>
             <Footer></Footer>
         </div>
     );

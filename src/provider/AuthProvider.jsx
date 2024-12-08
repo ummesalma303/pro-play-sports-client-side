@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { createContext } from 'react';
 import { auth } from '../firebase/Firebase.config';
 import Swal from 'sweetalert2';
+// import { useNavigate } from 'react-router-dom';
 
 const provider = new GoogleAuthProvider();
 export const AuthContext = createContext(null);
@@ -15,22 +16,29 @@ const AuthProvider = ({children}) => {
 
 /* ----------------------------- create new user ---------------------------- */
     const createNewUser=( email, password)=>{
+        setLoader(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 /* ------------------------------ sign in user ------------------------------ */
 
 const signInUser=(email, password)=>{
+    setLoader(true)
+
     return signInWithEmailAndPassword(auth, email, password)
 }
 
 
 /* ------------------ user name and photo update and added ------------------ */
 const updateUser=(data)=>{
+    // setLoader(true)
+
     return updateProfile(auth.currentUser,data)
     
 }
     /* ---------------------------- login with google --------------------------- */
     const googleLoginUser=()=>{
+        setLoader(true)
+
        return signInWithPopup(auth, provider)
        
     }
@@ -39,13 +47,18 @@ const updateUser=(data)=>{
 
 
     const signOutUser=()=>{
-        signOut(auth).then(() => {
+        setLoader(true)
+
+        signOut(auth)
+        .then(() => {
           
             Swal.fire({
                 title: "Warning",
                 text: "successfully sign out",
                 icon: "warning"
               });
+
+            //   navigate('/')
           }).catch((error) => {
             Swal.fire({
                 title: "Error",

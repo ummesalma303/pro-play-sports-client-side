@@ -28,7 +28,7 @@ const AllEquipment = () => {
         
 
 <div className="overflow-x-auto w-11/12 mx-auto pt-16 pb-20">
-<button className='btn mb-5 bg-teal-400 text-white' onClick={()=>handleSort(true)}><BiSortAlt2 />Sort</button>
+<button className='btn mb-5 bg-teal-400 text-white' onClick={()=>handleSort(true)}><BiSortAlt2 />Sort By Price</button>
 <Fade cascade>
 <table className="table backdrop-blur-md bg-white/80 *:text-black ">
     {/* head */}

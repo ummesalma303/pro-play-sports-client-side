@@ -9,7 +9,7 @@ const Products = ({product}) => {
     return (
           <Slide cascade >
               <div>
-            <div className="card bg-base-100 shadow-md">
+            <div className="card bg-base-100 shadow-md border-[1px] border-[#ffffff7e] rounded-lg">
   <figure className="px-10 pt-10">
     <img
       src={image}

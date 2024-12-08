@@ -45,7 +45,7 @@ const MyEquipment = ({equipment,loadedEquipment,setLoadedEquipment}) => {
         <div>
             
            <Slide>
-           <div className="card bg-base-100  shadow-lg">
+           <div className="card bg-base-100 border-[1px] border-[#ffffff7e] rounded-lg shadow-lg">
   <figure className="px-10 pt-10">
     <img
       src={image}

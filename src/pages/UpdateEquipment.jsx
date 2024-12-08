@@ -18,7 +18,7 @@ const UpdateEquipment = () => {
     const image = form.image.value;
     const category = form.category.value;
     const description = form.description.value;
-    const price = form.price.value;
+    const price = parseInt(form.price.value);
     const rating = form.rating.value;
     const customization = form.customization.value;
     const processing = form.processing.value;
