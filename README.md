@@ -1,5 +1,4 @@
 # Pro Play Sports
-
 ![Pro Play Sports Screenshot](https://i.ibb.co.com/WWRYVHMk/Screenshot-173.png)
 
 ## 🚀 Project Overview
