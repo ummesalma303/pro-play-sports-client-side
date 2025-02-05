@@ -15,7 +15,6 @@
 - **Frontend**: React, React Router DOM, Tailwind CSS, DaisyUI
 - **Backend & Services**: Firebase
 - **Animation & UI Enhancements**: Lottie React, React Icons, React Awesome Reveal, Swiper
-- **State Management & Utilities**: LocalForage, Match Sorter, Sort By
 - **Alerts & Notifications**: SweetAlert2, React Tooltip, React Toggle
 - **Development Tools**: Vite, ESLint, PostCSS
 
