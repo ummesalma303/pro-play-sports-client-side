@@ -1,6 +1,6 @@
 # Pro Play Sports
 
-![Pro Play Sports Screenshot](https://i.ibb.co.com/WWRYVHMk/Screenshot-173.png) <!-- Replace with an actual screenshot -->
+![Pro Play Sports Screenshot](https://i.ibb.co.com/WWRYVHMk/Screenshot-173.png)
 
 ## 🚀 Project Overview
 
@@ -140,6 +140,11 @@ Ensure you have a Firebase project set up and replace `.env.local` values with y
   ```
 - **Firebase authentication errors?** Ensure your Firebase project settings are correct.
 
+
+## 📚 Additional Resources
+- [React Documentation](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Firebase Documentation](https://firebase.google.com/docs/)
 
 
 
